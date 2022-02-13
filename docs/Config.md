@@ -117,7 +117,7 @@ $User = Config::getObject('core.user.class');
 * Передачу параметров в конструктор
 * Установку `public`-свойств
 
-Подробнее реализацию поддержки DI можно посмотреть в исходном коде ядра SimpleMVC (класс `Application`)
+Подробнее реализацию поддержки DI можно посмотреть в исходном коде ядра SimpleMVC (класс `Application` [исх. код](https://github.com/it-for-free/SimpleMVC/blob/master/src/Application.php#L1))
 
 
 
