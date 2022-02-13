@@ -10,7 +10,8 @@ $config = [
             'password' => '1234'
         ],
         'router' => [ // подсистема маршрутизация
-            'class' => \ItForFree\SimpleMVC\Router::class    
+            'class' => \ItForFree\SimpleMVC\Router::class,
+	    'alias' => '@router'
         ],
         'url' => [ 
             'class' => \ItForFree\SimpleMVC\Url::class
@@ -30,10 +31,15 @@ $config = [
 		=> \application\handlers\UserExceptionHandler::class
         ],
         'user' => [ // подсистема авторизации
-            'class' => \application\models\ExampleUser::class
+            'class' => \application\models\ExampleUser::class,
+	    'construct' => [
+                'session' => '@session',
+                'router' => '@router'
+             ], 
         ],
         'session' => [ // подсистема работы с сессиями
-            'class' => ItForFree\SimpleMVC\Session::class
+            'class' => ItForFree\SimpleMVC\Session::class,
+            'alias' => '@session'
         ]
     ]    
 ];
