@@ -3,7 +3,7 @@
 Пример проекта, разработанного на учебном движке (MCV-фреймворке) [SimpleMVC](https://github.com/it-for-free/SimpleMVC).
 
 
-## Установка
+## Установка ТЕЕЕЕЕЕЕЕЕЕЕЕЕЕЕЕЕСТ
 ВНИМАНИЕ: о composer-е и остальных моментах см. [в уроках по SimpleMVC](http://fkn.ktu10.com/?q=node/9429).
 
 1. Делаем форк репозитория https://github.com/it-for-free/SimpleMVC-example  и клонируем его из своего гитхаб-профиля на компьютер.
