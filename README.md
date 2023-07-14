@@ -41,8 +41,8 @@ composer install
 5. [Модели](docs/Models.md)
 6. [Представления](docs/Views.md)
 7. [Макеты (Layouts) представлений](docs/Layouts.md)
-8. [Авторзиация и Конроль доступа. Работа с текущим пользователем](docs/AuthAndAccessControl.md)
-9. (черновик) [Система работы с JS и CSS и управления локальными зависимостями между файлами (Asset-ы)](docs/WorkingWithAssets.md)
+8. [Авторизация и Конроль доступа. Работа с текущим пользователем](docs/AuthAndAccessControl.md)
+9. [Система работы с JS и CSS и управления локальными зависимостями между файлами (Asset-ы)](docs/WorkingWithAssets.md)
 10. (черновик) [Обработка исключений](docs/ExeptionsHandling.md)
 
 
