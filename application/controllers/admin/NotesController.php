@@ -12,7 +12,7 @@ use ItForFree\SimpleMVC\Config;
 class NotesController extends \ItForFree\SimpleMVC\mvc\Controller
 {
     
-    public $layoutPath = 'admin-main.php';
+    public string $layoutPath = 'admin-main.php';
     
     
     public function indexAction()

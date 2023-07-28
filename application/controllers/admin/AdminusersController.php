@@ -1,7 +1,7 @@
 <?php
 namespace application\controllers\admin;
 use ItForFree\SimpleMVC\Config;
-use \application\models\ExampleUser;
+use \application\models\UserModel;
 
 /**
  * Администрирование пользователей
@@ -9,9 +9,9 @@ use \application\models\ExampleUser;
 class AdminusersController extends \ItForFree\SimpleMVC\mvc\Controller
 {
     
-    public $layoutPath = 'admin-main.php';
+    public string $layoutPath = 'admin-main.php';
     
-    protected $rules = [ //вариант 2:  здесь всё гибче, проще развивать в дальнешем
+    protected array $rules = [ //вариант 2:  здесь всё гибче, проще развивать в дальнешем
          ['allow' => true, 'roles' => ['admin']],
          ['allow' => false, 'roles' => ['?', '@']],
     ];
@@ -21,7 +21,7 @@ class AdminusersController extends \ItForFree\SimpleMVC\mvc\Controller
      */
     public function indexAction()
     {
-        $Adminusers = new ExampleUser();
+        $Adminusers = new UserModel();
         $userId = $_GET['id'] ?? null;
         
         if ($userId) { // если указан конктреный пользователь
@@ -44,7 +44,7 @@ class AdminusersController extends \ItForFree\SimpleMVC\mvc\Controller
         $Url = Config::get('core.url.class');
         if (!empty($_POST)) {
             if (!empty($_POST['saveNewUser'])) {
-                $Adminusers = new ExampleUser();
+                $Adminusers = new UserModel();
                 $newAdminusers = $Adminusers->loadFromArray($_POST);
                 $newAdminusers->insert(); 
                 $this->redirect($Url::link("admin/adminusers/index"));
@@ -71,7 +71,7 @@ class AdminusersController extends \ItForFree\SimpleMVC\mvc\Controller
         if (!empty($_POST)) { // это выполняется нормально.
             
             if (!empty($_POST['saveChanges'] )) {
-                $Adminusers = new ExampleUser();
+                $Adminusers = new UserModel();
                 $newAdminusers = $Adminusers->loadFromArray($_POST);
                 $newAdminusers->update();
                 $this->redirect($Url::link("admin/adminusers/index&id=$id"));
@@ -80,7 +80,7 @@ class AdminusersController extends \ItForFree\SimpleMVC\mvc\Controller
                 $this->redirect($Url::link("admin/adminusers/index&id=$id"));
             }
         } else {
-            $Adminusers = new ExampleUser();
+            $Adminusers = new UserModel();
             $viewAdminusers = $Adminusers->getById($id);
             
             $editAdminusersTitle = "Редактирование данных пользователя";
@@ -103,7 +103,7 @@ class AdminusersController extends \ItForFree\SimpleMVC\mvc\Controller
         
         if (!empty($_POST)) {
             if (!empty($_POST['deleteUser'])) {
-                $Adminusers = new ExampleUser();
+                $Adminusers = new UserModel();
                 $newAdminusers = $Adminusers->loadFromArray($_POST);
                 $newAdminusers->delete();
                 
@@ -115,7 +115,7 @@ class AdminusersController extends \ItForFree\SimpleMVC\mvc\Controller
             }
         } else {
             
-            $Adminusers = new ExampleUser();
+            $Adminusers = new UserModel();
             $deletedAdminusers = $Adminusers->getById($id);
             $deleteAdminusersTitle = "Удаление статьи";
             

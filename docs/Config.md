@@ -36,7 +36,7 @@ $config = [
 		=> \application\handlers\UserExceptionHandler::class
         ],
         'user' => [ // подсистема авторизации
-            'class' => \application\models\ExampleUser::class,
+            'class' => \application\models\AuthUser::class,
 	        'construct' => [
                 'session' => '@session',
                 'router' => '@router'
@@ -93,7 +93,7 @@ $User = Config::getObject('core.user.class');
 
 ```php
 'user' => [ // подсистема авторизации
-    'class' => \application\models\ExampleUser::class,
+    'class' => \application\models\AuthUser::class,
     'construct' => [
         'session' => '@session',
         'router' => '@router'

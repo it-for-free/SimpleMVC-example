@@ -9,14 +9,14 @@ class LoginController extends \ItForFree\SimpleMVC\mvc\Controller
     /**
      * {@inheritDoc}
      */
-    public $layoutPath = 'main.php';
+    public string $layoutPath = 'main.php';
         
     /** 
      * @var string Название страницы
      */
     public $loginTitle = "Регистрация/Вход в систему";
     
-    protected $rules = [ 
+    protected array $rules = [ 
         ['allow' => true, 'roles' => ['?'], 'actions' => ['login']],
         ['allow' => true, 'roles' => ['@'], 'actions' => ['logout']],
     ];
