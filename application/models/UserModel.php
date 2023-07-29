@@ -108,22 +108,23 @@ class UserModel extends Model
     /**
      * Проверка логина и пароля пользователя.
      */
-    public function checkAuth($login) {
+    public function getAuthData($login): ?array {
 	$sql = "SELECT salt, pass FROM users WHERE login = :login";
 	$st = $this->pdo->prepare($sql);
 	$st->bindValue(":login", $login, \PDO::PARAM_STR);
 	$st->execute();
-	return $st->fetch();
+	$authData = $st->fetch();
+	return $authData ? $authData : null;
     }
     
     /**
      * Проверяем активность пользователя.
      */
-    public function getRole($login) {
+    public function getRole($login): array {
 	$sql = "SELECT role FROM users WHERE login = :login";
 	$st = $this->pdo->prepare($sql);
 	$st->bindValue(":login", $login, \PDO::PARAM_STR);
-	$st->execute();
+	$st->execute();	
 	return $st->fetch();
     }
 
