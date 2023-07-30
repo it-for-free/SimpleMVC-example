@@ -8,25 +8,26 @@
     "packages": [
         {
             "name": "adbario/php-dot-notation",
-            "version": "2.x-dev",
+            "version": "3.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/adbario/php-dot-notation.git",
-                "reference": "0a69aaabe706beebac848ef32587116b68875eea"
+                "reference": "e2c51bf106019896ed75bad029cdfcacc2c3c92e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/adbario/php-dot-notation/zipball/0a69aaabe706beebac848ef32587116b68875eea",
-                "reference": "0a69aaabe706beebac848ef32587116b68875eea",
+                "url": "https://api.github.com/repos/adbario/php-dot-notation/zipball/e2c51bf106019896ed75bad029cdfcacc2c3c92e",
+                "reference": "e2c51bf106019896ed75bad029cdfcacc2c3c92e",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
-                "php": ">=5.5"
+                "php": "^7.4 || ^8.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^4|^5|^6|^7|^8",
-                "squizlabs/php_codesniffer": "^3.0"
+                "phpstan/phpstan": "^1.8",
+                "phpunit/phpunit": "^9.5",
+                "squizlabs/php_codesniffer": "^3.7"
             },
             "default-branch": true,
             "type": "library",
@@ -56,9 +57,9 @@
             ],
             "support": {
                 "issues": "https://github.com/adbario/php-dot-notation/issues",
-                "source": "https://github.com/adbario/php-dot-notation/tree/2.x"
+                "source": "https://github.com/adbario/php-dot-notation/tree/3.x"
             },
-            "time": "2021-10-31T23:18:24+00:00"
+            "time": "2023-02-27T21:33:21+00:00"
         },
         {
             "name": "it-for-free/array_column",
@@ -238,12 +239,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/it-for-free/SimpleMVC.git",
-                "reference": "db6866825cc2e3ff50875775e279db54c8537b94"
+                "reference": "e8638518cdb922a8ebb0a7cb51d7c47cc0c10241"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/it-for-free/SimpleMVC/zipball/db6866825cc2e3ff50875775e279db54c8537b94",
-                "reference": "db6866825cc2e3ff50875775e279db54c8537b94",
+                "url": "https://api.github.com/repos/it-for-free/SimpleMVC/zipball/e8638518cdb922a8ebb0a7cb51d7c47cc0c10241",
+                "reference": "e8638518cdb922a8ebb0a7cb51d7c47cc0c10241",
                 "shasum": ""
             },
             "require": {
@@ -251,6 +252,11 @@
                 "it-for-free/php-simple-assets": "dev-master",
                 "it-for-free/rusphp": "v2.*",
                 "php": ">=7.2"
+            },
+            "require-dev": {
+                "codeception/codeception": "^4.1",
+                "codeception/module-asserts": "^1.0.0",
+                "codeception/module-phpbrowser": "^1.0.0"
             },
             "default-branch": true,
             "type": "cms",
@@ -272,7 +278,7 @@
                 "source": "https://github.com/it-for-free/SimpleMVC/tree/master",
                 "issues": "https://github.com/it-for-free/SimpleMVC/issues"
             },
-            "time": "2021-04-11T09:38:38+00:00"
+            "time": "2023-07-26T15:25:35+00:00"
         },
         {
             "name": "xantios/mimey",
@@ -332,5 +338,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "2.0.0"
+    "plugin-api-version": "2.3.0"
 }

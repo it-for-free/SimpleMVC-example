@@ -8,11 +8,11 @@ namespace application\models;
 
 class Note extends BaseExampleModel {
     
-    public $tableName = "notes";
+    public string $tableName = "notes";
     
-    public $orderBy = 'publicationDate ASC';
+    public string $orderBy = 'publicationDate ASC';
     
-    public $id = null;
+    public ?int $id = null;
     
     public $title = null;
     
