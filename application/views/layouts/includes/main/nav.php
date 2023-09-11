@@ -1,7 +1,7 @@
 
 <?php 
 use ItForFree\SimpleMVC\Config;
-use ItForFree\SimpleMVC\Url;
+use ItForFree\SimpleMVC\WebRouter;
 
 $User = Config::getObject('core.user.class');
 
@@ -22,24 +22,24 @@ $User = Config::getObject('core.user.class');
         </li>
         <?php  if ($User->isAllowed("login/login")): ?>
         <li class="nav-item ">
-            <a class="nav-link" href="<?= Url::link("login/login") ?>">[Вход]</a>
+            <a class="nav-link" href="<?= WebRouter::link("login/login") ?>">[Вход]</a>
         </li>
         <?php endif; ?>
         <?php  if ($User->isAllowed("admin/adminusers/index")): ?>
         <li class="nav-item ">
-            <a class="nav-link" href="<?= Url::link("admin/adminusers/index") ?>"> Пользователи </a>
+            <a class="nav-link" href="<?= WebRouter::link("admin/adminusers/index") ?>"> Пользователи </a>
         </li>
         <?php endif; ?>
         
         <?php  if ($User->isAllowed("admin/adminusers/index")): ?>
         <li class="nav-item ">
-            <a class="nav-link" href="<?= Url::link("admin/notes/index") ?>"> Заметки </a>
+            <a class="nav-link" href="<?= WebRouter::link("admin/notes/index") ?>"> Заметки </a>
         </li>
         <?php endif; ?>
         
         <?php  if ($User->isAllowed("login/logout")): ?>
         <li class="nav-item ">
-            <a class="nav-link" href="<?= Url::link("login/logout") ?>">Выход (<?= $User->userName ?>)</a>
+            <a class="nav-link" href="<?= WebRouter::link("login/logout") ?>">Выход (<?= $User->userName ?>)</a>
         </li>
         <?php endif; ?>
     </ul>

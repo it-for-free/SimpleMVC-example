@@ -9,7 +9,7 @@ $User = Config::getObject('core.user.class');
 <h2><?= $viewAdminusers->login ?>
     <span>
         <?= $User->returnIfAllowed("admin/adminusers/edit", 
-            "<a href=" . \ItForFree\SimpleMVC\Url::link("admin/adminusers/edit&id=". $viewAdminusers->id) 
+            "<a href=" . \ItForFree\SimpleMVC\WebRouter::link("admin/adminusers/edit&id=". $viewAdminusers->id) 
             . ">[Редактировать]</a>");?>
     </span>
 </h2> 

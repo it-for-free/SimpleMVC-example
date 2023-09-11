@@ -38,7 +38,7 @@ class NotesController extends \ItForFree\SimpleMVC\mvc\Controller
      */
     public function addAction()
     {
-        $Url = Config::get('core.url.class');
+        $Url = Config::get('core.router.class');
         if (!empty($_POST)) {
             if (!empty($_POST['saveNewNote'])) {
                 $Note = new Note();
@@ -64,7 +64,7 @@ class NotesController extends \ItForFree\SimpleMVC\mvc\Controller
     public function editAction()
     {
         $id = $_GET['id'];
-        $Url = Config::get('core.url.class');
+        $Url = Config::get('core.router.class');
         
         if (!empty($_POST)) { // это выполняется нормально.
             
@@ -98,7 +98,7 @@ class NotesController extends \ItForFree\SimpleMVC\mvc\Controller
     public function deleteAction()
     {
         $id = $_GET['id'];
-        $Url = Config::get('core.url.class');
+        $Url = Config::get('core.router.class');
         
         if (!empty($_POST)) {
             if (!empty($_POST['deleteNote'])) {

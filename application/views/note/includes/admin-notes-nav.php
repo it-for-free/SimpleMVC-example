@@ -1,6 +1,6 @@
 <?php 
 use ItForFree\SimpleMVC\Config;
-use ItForFree\SimpleMVC\Url;
+use ItForFree\SimpleMVC\WebRouter;
 
 $User = Config::getObject('core.user.class');
 
@@ -12,13 +12,13 @@ $User = Config::getObject('core.user.class');
     
     <?php  if ($User->isAllowed("admin/notes/index")): ?>
     <li class="nav-item ">
-        <a class="nav-link" href="<?= Url::link("admin/notes/index") ?>">Список</a>
+        <a class="nav-link" href="<?= WebRouter::link("admin/notes/index") ?>">Список</a>
     </li>
     <?php endif; ?>
     
     <?php  if ($User->isAllowed("admin/notes/add")): ?>
     <li class="nav-item ">
-        <a class="nav-link" href="<?= Url::link("admin/notes/add") ?>"> + Добавить заметку</a>
+        <a class="nav-link" href="<?= WebRouter::link("admin/notes/add") ?>"> + Добавить заметку</a>
     </li>
     <?php endif; ?>  
 </ul>

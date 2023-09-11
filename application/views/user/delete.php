@@ -1,7 +1,7 @@
 <?php 
 use ItForFree\SimpleMVC\Config;
 
-$Url = Config::getObject('core.url.class');
+$Url = Config::getObject('core.router.class');
 ?>
 
 <?php include('includes/admin-users-nav.php'); ?>

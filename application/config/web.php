@@ -10,11 +10,8 @@ $config = [
             'password' => '1234'
         ],
         'router' => [ // подсистема маршрутизация
-            'class' => \ItForFree\SimpleMVC\Router::class,
+            'class' => \ItForFree\SimpleMVC\WebRouter::class,
 	    'alias' => '@router'
-        ],
-        'url' => [ 
-            'class' => \ItForFree\SimpleMVC\Url::class
         ],
         'mvc' => [ // настройки MVC
             'views' => [
