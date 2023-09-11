@@ -1,7 +1,7 @@
 <?php include('includes/admin-users-nav.php'); ?>
 <h2><?= $addAdminusersTitle ?></h2>
 
-<form id="addUser" method="post" action="<?= \ItForFree\SimpleMVC\Url::link("admin/adminusers/add")?>"> 
+<form id="addUser" method="post" action="<?= \ItForFree\SimpleMVC\WebRouter::link("admin/adminusers/add")?>"> 
 
     <div class="form-group">
         <label for="login">Введите имя пользователя</label>

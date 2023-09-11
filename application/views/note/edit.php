@@ -11,7 +11,7 @@
 <?php 
 use ItForFree\SimpleMVC\Config;
 
-$Url = Config::getObject('core.url.class');
+$Url = Config::getObject('core.router.class');
 $User = Config::getObject('core.user.class');
 ?>
 

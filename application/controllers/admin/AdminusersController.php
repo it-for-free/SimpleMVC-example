@@ -41,7 +41,7 @@ class AdminusersController extends \ItForFree\SimpleMVC\mvc\Controller
      */
     public function addAction()
     {
-        $Url = Config::get('core.url.class');
+        $Url = Config::get('core.router.class');
         if (!empty($_POST)) {
             if (!empty($_POST['saveNewUser'])) {
                 $Adminusers = new UserModel();
@@ -66,7 +66,7 @@ class AdminusersController extends \ItForFree\SimpleMVC\mvc\Controller
     public function editAction()
     {
         $id = $_GET['id'];
-        $Url = Config::get('core.url.class');
+        $Url = Config::get('core.router.class');
         
         if (!empty($_POST)) { // это выполняется нормально.
             
@@ -99,7 +99,7 @@ class AdminusersController extends \ItForFree\SimpleMVC\mvc\Controller
     public function deleteAction()
     {
         $id = $_GET['id'];
-        $Url = Config::get('core.url.class');
+        $Url = Config::get('core.router.class');
         
         if (!empty($_POST)) {
             if (!empty($_POST['deleteUser'])) {

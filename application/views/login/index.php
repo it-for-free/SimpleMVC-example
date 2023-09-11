@@ -1,6 +1,6 @@
 <h2><?= $loginTitle ?></h2>
 
-<form method="post" action="<?= \ItForFree\SimpleMVC\Url::link('login/login')?>">
+<form method="post" action="<?= \ItForFree\SimpleMVC\WebRouter::link('login/login')?>">
     
     <?php 
     if (!empty($_GET['auth'])) {

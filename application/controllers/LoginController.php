@@ -1,7 +1,7 @@
 <?php
 namespace application\controllers;
 use ItForFree\SimpleMVC\Config;
-use ItForFree\SimpleMVC\Url;
+use ItForFree\SimpleMVC\WebRouter;
 
 class LoginController extends \ItForFree\SimpleMVC\mvc\Controller
 {
@@ -31,10 +31,10 @@ class LoginController extends \ItForFree\SimpleMVC\mvc\Controller
             $pass = $_POST['password'];
             $User = Config::getObject('core.user.class');
             if($User->login($login, $pass)) {
-                $this->redirect(Url::link("homepage/index"));
+                $this->redirect(WebRouter::link("homepage/index"));
             }
             else {
-                $this->redirect(Url::link("login/login&auth=deny"));
+                $this->redirect(WebRouter::link("login/login&auth=deny"));
             }
         }
         else {
@@ -50,7 +50,7 @@ class LoginController extends \ItForFree\SimpleMVC\mvc\Controller
     {
         $User = Config::getObject('core.user.class');
         $User->logout();
-        $this->redirect(Url::link("login/login"));
+        $this->redirect(WebRouter::link("login/login"));
     }
 }
 

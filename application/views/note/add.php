@@ -11,7 +11,7 @@
 <?php include('includes/admin-notes-nav.php'); ?>
 <h2><?= $addNoteTitle ?></h2>
 
-<form id="addNote" method="post" action="<?= \ItForFree\SimpleMVC\Url::link("admin/notes/add")?>"> 
+<form id="addNote" method="post" action="<?= \ItForFree\SimpleMVC\WebRouter::link("admin/notes/add")?>"> 
     <div class="form-group">
         <label for="title">Название новой заметки</label>
         <input type="text" class="form-control" name="title" id="title" placeholder="имя заметки">

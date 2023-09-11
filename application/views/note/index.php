@@ -20,7 +20,7 @@ $User = Config::getObject('core.user.class');
     <tbody>
     <?php foreach($notes as $note): ?>
     <tr>
-        <td> <?= "<a href=" . \ItForFree\SimpleMVC\Url::link('admin/notes/index&id=' 
+        <td> <?= "<a href=" . \ItForFree\SimpleMVC\WebRouter::link('admin/notes/index&id=' 
 		. $note->id . ">{$note->title}</a>" ) ?> </td>
         <td> <?= $note->content ?> </td>
         <td> <?= $note->publicationDate ?> </td>

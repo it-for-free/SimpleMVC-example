@@ -21,7 +21,7 @@ try/catch
             if (!empty($this->config)) {
                 $route = $this->getConfigObject('core.url.class')::getRoute();
                 /**
-                 * @var ItForFree\SimpleMVC\Router
+                 * @var ItForFree\SimpleMVC\WebRouter
                  */
                 $Router = $this->getConfigObject('core.router.class');
 
