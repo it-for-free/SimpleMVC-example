@@ -6,7 +6,7 @@ use \application\models\UserModel;
 /**
  * Администрирование пользователей
  */
-class AdminusersController extends \ItForFree\SimpleMVC\mvc\Controller
+class AdminusersController extends \ItForFree\SimpleMVC\MVC\Controller
 {
     
     public string $layoutPath = 'admin-main.php';

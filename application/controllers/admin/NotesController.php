@@ -9,7 +9,7 @@ use ItForFree\SimpleMVC\Config;
  * 
  */
 
-class NotesController extends \ItForFree\SimpleMVC\mvc\Controller
+class NotesController extends \ItForFree\SimpleMVC\MVC\Controller
 {
     
     public string $layoutPath = 'admin-main.php';

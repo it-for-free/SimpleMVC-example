@@ -1,7 +1,7 @@
 
 <?php 
 use ItForFree\SimpleMVC\Config;
-use ItForFree\SimpleMVC\WebRouter;
+use ItForFree\SimpleMVC\Router\WebRouter;
 
 $User = Config::getObject('core.user.class');
 

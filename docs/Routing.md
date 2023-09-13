@@ -55,13 +55,13 @@
 // .....
 $route = $this->getConfigObject('core.url.class')::getRoute();
 /**
-* @var \ItForFree\SimpleMVC\WebRouter
+* @var \ItForFree\SimpleMVC\Router\WebRouter
 */
 $Router = $this->getConfigObject('core.router.class');
 $Router->callControllerAction($route); // определяем и вызываем нужно действие контроллера
 // .....
 ```
--- как видим за процесс определения имени контроллера, имени действий и их вызов происходят в методе `callControllerAction()`, реализованном  уже другой классе Ядра, а именно `\ItForFree\SimpleMVC\WebRouter` ([исх. код](https://github.com/it-for-free/SimpleMVC/blob/master/src/WebRouter.php)).
+-- как видим за процесс определения имени контроллера, имени действий и их вызов происходят в методе `callControllerAction()`, реализованном  уже другой классе Ядра, а именно `\ItForFree\SimpleMVC\Router\WebRouter` ([исх. код](https://github.com/it-for-free/SimpleMVC/blob/master/src/WebRouter.php)).
 
 
 При этом код:
@@ -105,7 +105,7 @@ http://smvc.loc/index.php?route=admin/adminusers/index
 
 ## Как именно маршрут сопоставляется с действием контроллера
 
-Как уже говорилось выше, за сопоставление отвечает `\ItForFree\SimpleMVC\WebRouter`
+Как уже говорилось выше, за сопоставление отвечает `\ItForFree\SimpleMVC\Router\WebRouter`
 
 -- изучите работу его метода `callControllerAction()`, этот метод получает на вход строку машрута и далее пытается по ней (используя собственную логику) определить:
 1. имя класса контроллера

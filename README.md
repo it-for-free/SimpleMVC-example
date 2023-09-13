@@ -87,7 +87,7 @@ $User->explainAccess('/ваш/маршрут');
 
 ### Не надо вникать - мелкие правки
 
-* `ItForFree\SimpleMVC\WebRouter::link()` -- добавить вторым параметром список get-параметров, отличных от route
+* `ItForFree\SimpleMVC\Router\WebRouter::link()` -- добавить вторым параметром список get-параметров, отличных от route
 
 ### Не надо вникать - более крупное
 

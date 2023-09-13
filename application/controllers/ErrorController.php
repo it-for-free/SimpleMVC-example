@@ -1,7 +1,7 @@
 <?php
 namespace application\controllers;
 
-class ErrorController extends \ItForFree\SimpleMVC\mvc\Controller
+class ErrorController extends \ItForFree\SimpleMVC\MVC\Controller
 {
     public function indexAction($exception)
     {

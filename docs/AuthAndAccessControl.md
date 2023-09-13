@@ -18,7 +18,7 @@ $User = Config::getObject('core.user.class');
 
 Для проверки доступа следует задавать правила в контроллерах, например:
 ```php
-class AdminusersController extends \ItForFree\SimpleMVC\mvc\Controller
+class AdminusersController extends \ItForFree\SimpleMVC\MVC\Controller
 {
 
     protected $rules = [

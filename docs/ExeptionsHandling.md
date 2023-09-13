@@ -21,7 +21,7 @@ try/catch
             if (!empty($this->config)) {
                 $route = $this->getConfigObject('core.url.class')::getRoute();
                 /**
-                 * @var ItForFree\SimpleMVC\WebRouter
+                 * @var ItForFree\SimpleMVC\Router\WebRouter
                  */
                 $Router = $this->getConfigObject('core.router.class');
 
@@ -64,7 +64,7 @@ try/catch
 namespace application\handlers;
 
 use ItForFree\SimpleMVC\Config;
-use ItForFree\SimpleMVC\interfaces\ExceptionHandlerInterface;
+use ItForFree\SimpleMVC\Interfaces\ExceptionHandlerInterface;
 
 class MyExceptionHandler implements ExceptionHandlerInterface
 {

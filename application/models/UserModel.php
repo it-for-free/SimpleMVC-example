@@ -1,7 +1,7 @@
 <?php
 namespace application\models;
 
-use ItForFree\SimpleMVC\mvc\Model;
+use ItForFree\SimpleMVC\MVC\Model;
 /**
  * Класс для обработки пользователей
  */

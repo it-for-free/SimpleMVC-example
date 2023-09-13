@@ -7,7 +7,7 @@ namespace application\models;
  * Базовая клиентская модель
  *
  */
-class BaseExampleModel extends \ItForFree\SimpleMVC\mvc\Model
+class BaseExampleModel extends \ItForFree\SimpleMVC\MVC\Model
 {
     
     public function likesUpper($id,$tableName)
