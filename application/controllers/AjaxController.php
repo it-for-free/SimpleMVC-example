@@ -4,7 +4,7 @@ namespace application\controllers;
 /**
  * Можно использовать для обработки ajax-запросов.
  */
-class AjaxController extends \ItForFree\SimpleMVC\mvc\Controller 
+class AjaxController extends \ItForFree\SimpleMVC\MVC\Controller 
 {
     /**
      * Подгрузка "лайков" статей или товаров

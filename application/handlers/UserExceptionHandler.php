@@ -2,7 +2,7 @@
 namespace application\handlers;
 
 use ItForFree\SimpleMVC\Config;
-use ItForFree\SimpleMVC\interfaces\ExceptionHandlerInterface;
+use ItForFree\SimpleMVC\Interfaces\ExceptionHandlerInterface;
 
 /**
  * Пример пользовательского класса для перехвата исключений

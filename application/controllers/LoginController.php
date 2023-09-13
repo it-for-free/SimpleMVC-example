@@ -1,9 +1,9 @@
 <?php
 namespace application\controllers;
 use ItForFree\SimpleMVC\Config;
-use ItForFree\SimpleMVC\WebRouter;
+use ItForFree\SimpleMVC\Router\WebRouter;
 
-class LoginController extends \ItForFree\SimpleMVC\mvc\Controller
+class LoginController extends \ItForFree\SimpleMVC\MVC\Controller
 {
     
     /**

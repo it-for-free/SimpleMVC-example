@@ -5,7 +5,7 @@ namespace application\controllers;
 /**
  * Контроллер для домашней страницы
  */
-class HomepageController extends \ItForFree\SimpleMVC\mvc\Controller
+class HomepageController extends \ItForFree\SimpleMVC\MVC\Controller
 {
     /**
      * @var string Название страницы
