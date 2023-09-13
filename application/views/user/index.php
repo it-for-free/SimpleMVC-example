@@ -26,7 +26,7 @@ $User = Config::getObject('core.user.class');
 		. $user->id . ">{$user->login}</a>" ) ?> </td>
         <td>  <?= $user->email ?> </td>
         <td>  <?= $user->timestamp ?> </td>
-        <td>  <?= $User->returnIfAllowed("admin/adminusers/edit", 
+        <td>  <?= $User->returnIfAllowed("admin/adminusers/edit",
                     "<a href=" . \ItForFree\SimpleMVC\Router\WebRouter::link("admin/adminusers/edit&id=". $user->id) 
                     . ">[Редактировать]</a>");?></td>
     </tr>
