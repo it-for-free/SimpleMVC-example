@@ -239,12 +239,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/it-for-free/SimpleMVC.git",
-                "reference": "e8638518cdb922a8ebb0a7cb51d7c47cc0c10241"
+                "reference": "e6bbd45469c4baa279b64696712f627250d30839"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/it-for-free/SimpleMVC/zipball/e8638518cdb922a8ebb0a7cb51d7c47cc0c10241",
-                "reference": "e8638518cdb922a8ebb0a7cb51d7c47cc0c10241",
+                "url": "https://api.github.com/repos/it-for-free/SimpleMVC/zipball/e6bbd45469c4baa279b64696712f627250d30839",
+                "reference": "e6bbd45469c4baa279b64696712f627250d30839",
                 "shasum": ""
             },
             "require": {
@@ -254,9 +254,9 @@
                 "php": ">=7.2"
             },
             "require-dev": {
-                "codeception/codeception": "^4.1",
-                "codeception/module-asserts": "^1.0.0",
-                "codeception/module-phpbrowser": "^1.0.0"
+                "codeception/codeception": "^5.0",
+                "codeception/module-asserts": "^3.0.0",
+                "codeception/module-phpbrowser": "^2.0.3"
             },
             "default-branch": true,
             "type": "cms",
@@ -278,7 +278,7 @@
                 "source": "https://github.com/it-for-free/SimpleMVC/tree/master",
                 "issues": "https://github.com/it-for-free/SimpleMVC/issues"
             },
-            "time": "2023-07-26T15:25:35+00:00"
+            "time": "2023-09-13T17:21:25+00:00"
         },
         {
             "name": "xantios/mimey",
