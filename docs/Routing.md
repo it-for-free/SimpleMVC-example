@@ -53,7 +53,7 @@
 
 ```php
 // .....
-$route = $this->getConfigObject('core.url.class')::getRoute();
+$route = $this->getConfigObject('core.router.class')::getRoute();
 /**
 * @var \ItForFree\SimpleMVC\Router\WebRouter
 */
@@ -66,9 +66,9 @@ $Router->callControllerAction($route); // определяем и вызывае
 
 При этом код:
 ```php
-$route = $this->getConfigObject('core.url.class')::getRoute();
+$route = $this->getConfigObject('core.router.class')::getRoute();
 ```
--- отвечает за получение `строки маршрута`, для чего статический вызывается метод `getRoute()` класса, лежащего в кофиге приложения по адресу core.url.class - подразумевается, что этот метод этого класса отвечает за реализацию процесса получения строки маршрута.
+-- отвечает за получение `строки маршрута`, для чего статический вызывается метод `getRoute()` класса, лежащего в кофиге приложения по адресу core.router.class - подразумевается, что этот метод этого класса отвечает за реализацию процесса получения строки маршрута.
 
 
 **Ещё раз схема работы, но теперь кратко**
