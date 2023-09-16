@@ -19,7 +19,7 @@ try/catch
         $exceptionHandler = new ExceptionHandler();
         try{
             if (!empty($this->config)) {
-                $route = $this->getConfigObject('core.url.class')::getRoute();
+                $route = $this->getConfigObject('core.router.class')::getRoute();
                 /**
                  * @var ItForFree\SimpleMVC\Router\WebRouter
                  */
