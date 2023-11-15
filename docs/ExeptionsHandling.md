@@ -83,7 +83,7 @@ ExceptionHandlerInterface входящий в ядро фреймворка. Т�
 // \application\config\web.php
 ...
 'handlers' => [
-            'ItForFree\SimpleMVC\exceptions\SmvcAccessException' => \application\handlers\MyExceptionHandler::class
+            'ItForFree\SimpleMVC\Exceptions\SmvcAccessException' => \application\handlers\MyExceptionHandler::class
         ]
 ```
 В методе `handleException` мы должны описать поведение обработки.
