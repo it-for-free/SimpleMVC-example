@@ -3,10 +3,12 @@ use ItForFree\rusphp\File\Path;
 
 function autoload($className)
 {
+    global $argv;
+    $isConsoleApp = isset($argv[0]) && $argv[0] == 'console.php';
 // echo '-- '  . $className;   
     // базовая диретория, которая является корнем автозагрузки
-    $baseDir = Path::addToDocumentRoot('..' . DIRECTORY_SEPARATOR);
-    
+    $baseDir = $isConsoleApp ? __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR :
+        Path::addToDocumentRoot('..' . DIRECTORY_SEPARATOR);
     $className = ltrim($className, '\\');
     $fileName  = '';
     $fileName .= $baseDir;
