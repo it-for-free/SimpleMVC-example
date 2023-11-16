@@ -1,7 +1,7 @@
 <?php
 
 $projectRoot = __DIR__;
-require_once("web/autoload.php");
+require_once 'console_autoload.php';
 
 $localConfig = require(__DIR__ . '/application/config/web-local.php');
 $config = ItForFree\rusphp\PHP\ArrayLib\Merger::mergeRecursivelyWithReplace(
