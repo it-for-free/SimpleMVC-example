@@ -27,9 +27,9 @@ $config = [
             ]
         ],
         'handlers' => [ // подсистема перехвата исключений
-            'ItForFree\SimpleMVC\exceptions\SmvcAccessException' 
+            'ItForFree\SimpleMVC\Exceptions\SmvcAccessException' 
 		=> \application\handlers\UserExceptionHandler::class,
-            'ItForFree\SimpleMVC\exceptions\SmvcRoutingException' 
+            'ItForFree\SimpleMVC\Exceptions\SmvcRoutingException' 
 		=> \application\handlers\UserExceptionHandler::class
         ],
         'user' => [ // подсистема авторизации

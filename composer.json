@@ -1,7 +1,8 @@
 {
     "require": {
         "it-for-free/simple-mvc": "dev-master",
-        "it-for-free/rusphp": "v2.*"      
+        "it-for-free/rusphp": "v2.*",
+        "php": ">=8.2"
     },
     "minimum-stability" : "dev",
     "repositories": [
