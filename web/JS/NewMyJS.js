@@ -3,15 +3,13 @@
  * 
  * 
  */
-$(function(){
-    
+$(function() {
     console.log('Start work');
     homePageAlert();
 });
 
-
 function homePageAlert() {
-            $('h1.callAlert').click(function(){
-                alert("This is our country!");
-            });
+    $('h1.callAlert').click(function(){
+        alert("Привет! Это обработчик клика по заголовку ;)");
+    });
 }
