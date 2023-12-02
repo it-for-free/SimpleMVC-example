@@ -1,7 +1,5 @@
 /* 
  * Пример работы JS с помощью Asset.
- * 
- * 
  */
 $(function() {
     console.log('Start work');
