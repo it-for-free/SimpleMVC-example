@@ -2,3 +2,15 @@ version: '3.9'
 services:
   db:
     image: mysql:8.0.35-debian
+    ports: 
+      - "23306:3306"
+    environment:
+        MYSQL_DATABASE: smvcbase_in_docker
+        MYSQL_USER: myuser
+        MYSQL_PASSWORD: 12345
+        MYSQL_ROOT_PASSWORD: 12345
+    volumes:
+        - ../dump:/docker-entrypoint-initdb.d
+        - persistent:/var/lib/mysql
+    networks:
+        - default

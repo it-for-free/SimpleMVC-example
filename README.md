@@ -13,7 +13,7 @@
 ``` 
 composer install
 ```
-4. Разворачиваем приложенный _дамп_ из файла `basedump.sql` ([например так](http://fkn.ktu10.com/?q=node/1173)).
+4. Разворачиваем приложенный _дамп_ из файла `dump/basedump.sql` ([например так](http://fkn.ktu10.com/?q=node/1173)).
 5. Создаём копию `application/config/web-local-example.php` в той же папке с названием `application/config/web-local.php` 
   и прописываем туда доступы к базе данных.
 
