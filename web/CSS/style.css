@@ -1,42 +1,361 @@
-/* Дополнительные стили сайта (помимо самого бутстрапа) */
+/* Стили для body и внешнего контейнера */
 
-
-
-/* Футе для бутстрапа
--------------------------------------------------- */
-html {
-  position: relative;
-  min-height: 100%;
-}
 body {
-  margin-bottom: 60px; /* Margin bottom by footer height */
+  margin: 0;
+  color: #333;
+  background-color: #00a0b0;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  line-height: 1.5em;
 }
-.footer {
-  position: absolute;
-  bottom: 0;
+
+#container {
+  width: 960px;
+  background: #fff;
+  margin: 20px auto;
+  padding: 20px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+
+/* Логотип и нижний колонтитул */
+
+#logo {
+  display: block;
+  width: 300px;
+  padding: 0 660px 20px 0;
+  border: none;
+  border-bottom: 1px solid #00a0b0;
+  margin-bottom: 40px;
+}
+
+#footer {
+  border-top: 1px solid #00a0b0;
+  margin-top: 40px;
+  padding: 20px 0 0 0;
+  font-size: .8em;
+}
+
+.loader-identity {
+    display : none;
+    float : right;
+}
+
+
+/* Заголовки */
+
+h1 {
+  color: #eb6841;
+  margin-bottom: 30px;
+  line-height: 1.2em;
+}
+
+h2, h2 a {
+  color: #edc951;
+}
+
+h2 a {
+  text-decoration: none;
+}
+
+h3.categoryDescription {
+  margin-top: -20px;
+  margin-bottom: 40px;
+}
+
+
+/* Заголовки статей */
+
+#headlines {
+  list-style: none;
+  padding-left: 0;
+  width: 75%;
+}
+
+#headlines li {
+  margin-bottom: 2em;
+}
+
+.pubDate {
+  font-size: .8em;
+  color: #eb6841;
+  text-transform: uppercase;
+}
+
+#headlines .pubDate {
+  display: inline-block;
+  width: 100px;
+  font-size: .5em;
+  vertical-align: middle;
+}
+
+#headlines.archive .pubDate {
+  width: 130px;
+}
+
+.summary {
+  padding-left: 100px;
+}
+
+#headlines.archive .summary {
+  padding-left: 130px;
+}
+
+.category {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 60%;
+  color: #999;
+  display: block;
+  line-height: 2em;
+}
+
+.category a {
+  color: #999;
+  text-decoration: underline;
+}
+
+.showContent {
+    font-size : 14px;
+    float : right;
+}
+
+
+/* Заголовок для страницы администратора */
+
+#adminHeader {
+  width: 940px;
+  padding: 0 10px;
+  border-bottom: 1px solid #00a0b0;
+  margin: -30px 0 40px 0;
+  font-size: 0.8em;
+}
+
+
+/* Стили для формы с цветным фоном, скругленными углами и тенью */
+
+form {
+  margin: 20px auto;
+  padding: 40px 20px;
+  overflow: auto;
+  background: #fff4cf;
+  border: 1px solid #666;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px; 
+  border-radius: 5px;
+  -moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+  -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+  box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+}
+
+
+/* Задаем для элементов формы согласованные поля, отступы, и высоту строки */
+
+form ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+form ul li {
+  margin: .9em 0 0 0;
+  padding: 0;
+}
+
+form * {
+  line-height: 1em;
+}
+
+
+/* Метки полей */
+
+label {
+  display: block;
+  float: left;
+  clear: left;
+  text-align: right;
+  width: 15%;
+  padding: .4em 0 0 0;
+  margin: .15em .5em 0 0;
+}
+
+
+/* Поля */
+
+input, select, textarea {
+  display: block;
+  margin: 0;
+  padding: .4em;
+  width: 80%;
+}
+
+input, textarea, .date {
+  border: 2px solid #666;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;   
+  border-radius: 5px;
+  background: #fff;
+}
+
+input {
+  font-size: .9em;
+}
+
+select {
+  padding: 0;
+  margin-bottom: 2.5em;
+  position: relative;
+  top: .7em;
+}
+
+textarea {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  font-size: .9em;
+  height: 5em;
+  line-height: 1.5em;
+}
+
+textarea#content {
+  font-family: "Courier New", courier, fixed;
+}
+
+#checkActivity {
+  display: block;
+  width: 25px;             
+  height: 25px;
+  cursor: pointer;
+}
+
+
+/* Рамка вокруг поля с фокусом ввода */
+
+form *:focus {
+  border: 2px solid #7c412b;
+  outline: none;
+}
+
+
+/* Правильно заполненное поле имеет зеленый фон */
+
+input:valid, textarea:valid {
+  background: #efe;
+}
+
+
+/* Кнопки отправки */
+
+.buttons {
+  text-align: center;
+  margin: 40px 0 0 0;
+}
+
+input[type="submit"] {
+  display: inline;
+  margin: 0 20px;
+  width: 12em;
+  padding: 10px;
+  border: 2px solid #7c412b;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px; 
+  border-radius: 5px;
+  -moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+  -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+  box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+  color: #fff;
+  background: #ef7d50;
+  font-weight: bold;
+  -webkit-appearance: none;
+}
+
+input[type="submit"]:hover, input[type="submit"]:active {
+  cursor: pointer;
+  background: #fff;
+  color: #ef7d50;
+}
+
+input[type="submit"]:active {
+  background: #eee;
+  -moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8) inset;
+  -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8) inset;
+  box-shadow: 0 0 .5em rgba(0, 0, 0, .8) inset;
+}
+
+
+/* Таблицы */
+
+table {
   width: 100%;
-  height: 60px; /* Set the fixed height of the footer here */
-  line-height: 60px; /* Vertically center the text there */
-  background-color: #f5f5f5;
+  border-collapse: collapse;
+}
+
+tr, th, td {
+  padding: 10px;
+  margin: 0;
+  text-align: left;
+}
+
+table, th {
+  border: 1px solid #00a0b0;
+}
+
+th {
+  border-left: none;
+  border-right: none;
+  background: #ef7d50;
+  color: #fff;
+  cursor: default;
+}
+
+tr:nth-child(odd) {
+  background: #fff4cf;
+}
+
+tr:nth-child(even) {
+  background: #fff;
+}
+
+tr:hover {
+  background: #ddd;
+  cursor: pointer;
 }
 
 
-/* Коилефт*/
-.copyleft {
-    -webkit-transform: scaleX(-1);
-      -moz-transform: scaleX(-1);
-        -o-transform: scaleX(-1);
-    -khtml-transform: scaleX(-1);
-       -ms-transform: scaleX(-1);
-           transform: scaleX(-1);
-   display: inline-block;
+/* Окна для вывода статуса и сообщений об ошибках */
+
+.statusMessage, .errorMessage {
+  font-size: .8em;
+  padding: .5em;
+  margin: 2em 0;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+  -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+  -box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
 }
 
-
-.footer-link {
-    color: #17a2b8;
+.statusMessage {
+  background-color: #2b2;
+  border: 1px solid #080;
+  color: #fff;
 }
 
+.errorMessage {
+  background-color: #f22;
+  border: 1px solid #800;
+  color: #fff;
+}
 
-
+ul.ajax-load {
+    margin-left:  0px;
+    padding-left: 10px;
+}
+ul.ajax-load li {
+    display: inline; /* Отображать как строчный элемент */
+    margin-right: 5px; /* Отступ слева */
+    border: 1px solid #000; /* Рамка вокруг текста */
+    padding: 3px; /* Поля вокруг текста */
+    font-size: 12px;
+}
 

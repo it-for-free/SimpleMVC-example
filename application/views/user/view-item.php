@@ -1,18 +1,21 @@
 <?php 
 use ItForFree\SimpleMVC\Config;
 
-$User = Config::getObject('core.user.class');
+$Url = Config::getObject('core.router.class');
 ?>
 
 <?php include('includes/admin-users-nav.php'); ?>
 
-<h2><?= $viewAdminusers->login ?>
-    <span>
-        <?= $User->returnIfAllowed("admin/adminusers/edit", 
-            "<a href=" . \ItForFree\SimpleMVC\Router\WebRouter::link("admin/adminusers/edit&id=". $viewAdminusers->id) 
-            . ">[Редактировать]</a>");?>
-    </span>
-</h2> 
+        <h2><?= $viewAdminuser->login ?>
+            <span>
+            <?= $User->returnIfAllowed("admin/adminusers/edit", 
+                "<a href=\"" . $Url::link("admin/adminusers/edit&id=" . $viewAdminuser->id) . "\">[Редактировать]</a>"); ?>
+            </span>
+        </h2>
 
-<p>Зарегистрирован <?= $viewAdminusers->timestamp ?></p>
-<p>E-mail: <?= $viewAdminusers->email ?></p>
+        <p>Зарегистрирован: <?= $viewAdminuser->timestamp ?></p>
+        <p>E-mail: <?= $viewAdminuser->email ?></p>
+        <p>Права доступа: <?=
+                $viewAdminuser->role == 'auth_user' ? "Зарегистрированный пользователь" : "" ?><?=
+                $viewAdminuser->role == 'admin' ? "Администратор" : "" ?></p>
+        <p>Активность: <?= ! isset($viewAdminuser->active) || $viewAdminuser->active ? "Активен" : "Заблокирован" ?></p>

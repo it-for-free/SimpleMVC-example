@@ -5,7 +5,7 @@ namespace application\controllers;
 /**
  * Контроллер для проверки работоспособности консольного приложения
  */
-class HelloController
+class HelloController extends \ItForFree\SimpleMVC\MVC\Controller
 {
     public function indexAction()
     {

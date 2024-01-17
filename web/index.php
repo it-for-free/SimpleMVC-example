@@ -12,7 +12,6 @@ $config = ItForFree\rusphp\PHP\ArrayLib\Merger::mergeRecursivelyWithReplace(
 
 require_once("../application/bootstrap.php");
 
-
 \ItForFree\SimpleMVC\Application::get()
     ->setConfiguration($config)
     ->run();

@@ -1,48 +1,70 @@
 <?php
 namespace application\controllers;
+
 use ItForFree\SimpleMVC\Config;
 use ItForFree\SimpleMVC\Router\WebRouter;
+use \application\models\UserModel;
 
 class LoginController extends \ItForFree\SimpleMVC\MVC\Controller
 {
-    
     /**
      * {@inheritDoc}
      */
     public string $layoutPath = 'main.php';
-        
-    /** 
-     * @var string Название страницы
+
+    /**
+     * @var string Тайтл страницы
      */
-    public $loginTitle = "Регистрация/Вход в систему";
-    
-    protected array $rules = [ 
+    public $pageTitle = "Admin Login | Widget News";
+
+    /**
+     * Определим соответствие роли пользователя и разрешённых для этой роли методов контроллера
+     * Поддерживаются псевдонимы:
+     * ? -- для пользователя с ролью как $guestRoleName (условный гость -- т.е. неавторизованный пользователь)
+     * @ -- для пользователя с ролью НЕ как $guestRoleName (условно -- все остальные пользователи, авторизованные, не гости)
+     *
+     * @var array
+     */
+    protected array $rules = [
         ['allow' => true, 'roles' => ['?'], 'actions' => ['login']],
         ['allow' => true, 'roles' => ['@'], 'actions' => ['logout']],
     ];
-    
+
     /**
      * Вход в систему / Выводит на экран форму для входа в систему
      */
     public function loginAction()
     {
-        if (!empty($_POST)) {
+        if (! empty($_POST)) {
             $login = $_POST['userName'];
             $pass = $_POST['password'];
+
+            // Узнаем, активен (не заблокирован) ли пользователь c введённым в форму логином
+            $Adminuser = new UserModel();
+            $activeAdminuser = $Adminuser->getActive($_POST['userName']);
+            // print_r($activeAdminuser);
+            if (isset($activeAdminuser) && $activeAdminuser != 1) {
+                // Выведем сообщение о блокировке если пользователь существует и при этом не активен
+                $this->redirect(WebRouter::link("login/login&auth=blocked"));
+                return;
+            }
+
+            // Если активен или не существует такого пользователя, двигаемся дальше
             $User = Config::getObject('core.user.class');
-            if($User->login($login, $pass)) {
-                $this->redirect(WebRouter::link("homepage/index"));
+            if ($User->login($login, $pass)) {
+                $this->redirect(WebRouter::link("admin/articles/index"));
             }
             else {
                 $this->redirect(WebRouter::link("login/login&auth=deny"));
             }
         }
         else {
-            $this->view->addVar('loginTitle', $this->loginTitle);
+            $results['pageTitle'] = $this->pageTitle;
+            $this->view->addVar('results', $results);
             $this->view->render('login/index.php');
         }
     }
-    
+
     /**
      * Выход из системы
      */
@@ -53,5 +75,4 @@ class LoginController extends \ItForFree\SimpleMVC\MVC\Controller
         $this->redirect(WebRouter::link("login/login"));
     }
 }
-
 

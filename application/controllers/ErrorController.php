@@ -5,7 +5,6 @@ class ErrorController extends \ItForFree\SimpleMVC\MVC\Controller
 {
     public function indexAction($exception)
     {
-        
         $this->view->addVar('status', $exception->getCode());
         $this->view->addVar('exception', $exception);
         $this->view->addVar('trace', $exception->getTrace());
@@ -13,3 +12,4 @@ class ErrorController extends \ItForFree\SimpleMVC\MVC\Controller
         $this->view->render('error.php');
     }
 }
+

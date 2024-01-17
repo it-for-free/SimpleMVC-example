@@ -1,19 +1,26 @@
-<?php 
-use ItForFree\SimpleMVC\Config;
-
-
-$User = Config::getObject('core.user.class');
-
+<?php
+use ItForFree\SimpleAsset\SimpleAssetManager;
 ?>
 <!DOCTYPE html>
 <html>
-    <?php include('includes/main/head.php'); ?>
-    <body> 
-        <?php include('includes/admin-main/nav.php'); ?>
-        <div class="container">
-            <?= $CONTENT_DATA ?>
-        </div>
-        <?php include('includes/main/footer.php'); ?>
-    </body>
-</html>
+<?php include('includes/main/head.php'); ?>
 
+<body>
+    <div id="container">
+        <?php include('includes/main/logo.php'); ?>
+        <?php include('includes/admin-main/nav.php'); ?>
+        <?php include('includes/admin-main/message.php'); ?>
+
+        <?= $CONTENT_DATA ?>
+
+        <?php include('includes/admin-main/footer.php'); ?>
+    </div><!--'end_container'-->
+
+    <?php
+        // класс CustomJavascriptAsset подключает jquery-3.2.1.js и NewMyJS.js из папки web/JS/
+        // а метод printJS() выведет popper.js и bootstrap.js из папки web/CSS/bootstrap (задействуется класс BootstrapAsset)
+        SimpleAssetManager::printJS();
+    ?>
+</body>
+
+</html>

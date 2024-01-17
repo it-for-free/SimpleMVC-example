@@ -1,29 +1,53 @@
+<?php 
+use ItForFree\SimpleMVC\Config;
+
+$Url = Config::getObject('core.router.class');
+?>
+
 <?php include('includes/admin-users-nav.php'); ?>
-<h2><?= $addAdminusersTitle ?></h2>
 
-<form id="addUser" method="post" action="<?= \ItForFree\SimpleMVC\Router\WebRouter::link("admin/adminusers/add")?>"> 
+        <form action="<?= $Url::link("admin/adminusers/add") ?>" method="post"> 
 
-    <div class="form-group">
-        <label for="login">Введите имя пользователя</label>
-        <input type="text" class="form-control" name="login" id="login" placeholder="имя пользователя">
-    </div>
-    <div class="form-group">
-        <label for="pass">Введите пароль</label>
-        <input type="text" class="form-control"  name="pass" id="pass" placeholder="пароль">
-    </div>
-    <div class="form-group">   
-        <label for="role">Права доступа</label>
-        <select name="role" id="role" class="form-control"> 
-            <option value="admin">Администратор</option>
-            <option value="auth_user">Зарегистрированный пользователь</option>
-        </select>
-    </div>
-    <div class="form-group">
-        <label for="email">Введите e-mail </label>
-        <input type="text" class="form-control"  name="email" id="email" placeholder="адрес электропочты">
-    </div>
-    <input type="submit" class="btn btn-primary" name="saveNewUser" value="Сохранить">
-    <input type="submit" class="btn" name="cancel" value="Назад">
-</form>
+            <?php if (isset($results['errorMessage'])): ?>
+                <div class="errorMessage"><?= $results['errorMessage'] ?></div>
+            <?php endif; ?>
 
+            <ul>
 
+                <li>
+                    <label for="login">User login</label>
+                    <input type="text" name="login" id="login" placeholder="Login of the user" required autofocus maxlength="32" value="" />
+                </li>
+
+                <li>
+                    <label for="password">User password</label>
+                    <input type="text" name="pass" id="password" placeholder="Password of the user" required autofocus maxlength="32" value="" />
+                </li>
+
+                <li>
+                    <label for="email">User e-mail</label>
+                    <input type="text" name="email" id="email" placeholder="Login of the user" required autofocus maxlength="32" value="" />
+                </li>
+
+                <li>
+                    <label for="role">Задайте права доступа</label>
+                    <select name="role" id="role">
+                        <option value="auth_user">Зарегистрированный пользователь</option>
+                        <option value="admin">Администратор</option>
+                    </select>
+                </li>
+
+                <li>
+                    <label for="checkActivity">User activity</label>
+                    <input type="hidden" name="active" value="0" />
+                    <input id="checkActivity" type="checkbox" name="active" value="1"/>
+                </li>
+
+            </ul>
+
+            <div class="buttons">
+                <input type="submit" name="saveNewUser" value="Add new User" />
+                <input type="submit" formnovalidate name="cancel" value="Cancel" />
+            </div>
+
+        </form>

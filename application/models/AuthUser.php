@@ -2,12 +2,13 @@
 namespace application\models;
 
 use ItForFree\SimpleMVC\User;
+
 /**
  * Класс для проверки авторизационных данных пользователя
+ * (подключается через конфигурационной файл приложения web.php)
  */
 class AuthUser extends User
-{        
-    
+{
     /**
      * Проверка логина и пароля пользователя.
      */
@@ -21,7 +22,7 @@ class AuthUser extends User
 	    if ($passForCheck) {
 		$result = true;
 	    }
-	}	
+	}
         return $result;
     }
 
@@ -35,5 +36,5 @@ class AuthUser extends User
 	    return $siteAuthData['role'];
         }
     }
-
 }
+

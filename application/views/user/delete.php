@@ -8,7 +8,7 @@ $Url = Config::getObject('core.router.class');
 
 <h2><?= $deleteAdminusersTitle ?></h2>
 
-<form method="post" action="<?= $Url::link("admin/adminusers/delete&id=". $_GET['id'])?>" >
+<form method="post" action="<?= $Url::link("admin/adminusers/delete&id=". $deletedAdminusers->id) ?>" >
     Вы уверены, что хотите удалить данные пользователя?
     
     <input type="hidden" name="id" value="<?= $deletedAdminusers->id ?>">
