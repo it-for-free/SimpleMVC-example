@@ -11,5 +11,10 @@ class HelloController
     {
         echo 'HELLO !', PHP_EOL;
     }
+
+    public function calcAction()
+    {
+        echo 1 + 2, PHP_EOL;
+    }
 }
 
