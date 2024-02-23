@@ -14,9 +14,13 @@ class HelloController
 
     public function calcAction()
     {
+        echo 1 + 2, PHP_EOL;
+    }
+
+    public function echoAction()
+    {
         global $argv;
         echo 'Вы ввели команду: "' . $argv[1] . '"', PHP_EOL;
-        echo 1 + 2, PHP_EOL;
     }
 }
 

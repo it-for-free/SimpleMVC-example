@@ -20,6 +20,7 @@ php console.php контроллер[:действие]
 Рассмотрим возможные команды для котроллера [HelloController](https://github.com/it-for-free/SimpleMVC-example/blob/master/application/controllers/HelloController.php).
 ```shell 
 php console.php hello:calc
+php console.php hello:echo
 ```
 Следующие команды эквивалентны:
 ```shell 
