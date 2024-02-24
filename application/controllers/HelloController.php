@@ -21,6 +21,8 @@ class HelloController
     {
         global $argv;
         echo 'Вы ввели команду: "' . $argv[1] . '"', PHP_EOL;
+        if (count($argv) == 3) {
+            echo 'Дополнительный аргумент: "' . $argv[2] . '"', PHP_EOL;
+        }
     }
 }
-
