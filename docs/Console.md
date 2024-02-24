@@ -19,24 +19,27 @@ php console.php контроллер[:действие] [:параметр]
 `[:действие]` - метод контроллера, должен быть в нижнем регистре без суффикса `Action`, является необязательным аргументом, при его отсутствии в команде будет вызываться метод по умолчанию `indexAction()`.
 `[:параметр]` - любая строка, не содержащая пробелы. Параметр доступен только для метода echoAction().
 Рассмотрим возможные команды для котроллера [HelloController](https://github.com/it-for-free/SimpleMVC-example/blob/master/application/controllers/HelloController.php).
+пример:
 ```shell 
 php console.php hello:calc
 ```
-вывод:
+в терминале получим:
 ```shell 
 3
 ```
+пример:
 ```shell 
 php console.php hello:echo
 ```
-вывод:
+в терминале получим:
 ```shell 
 Вы ввели команду: "hello:echo"
 ```
+пример:
 ```shell 
 php console.php hello:echo параметр_1
 ```
-вывод:
+в терминале получим:
 ```shell 
 Вы ввели команду: "hello:echo"
 Дополнительный аргумент: "параметр_1"
@@ -49,7 +52,7 @@ php console.php hello
 ```shell 
 php console.php hello:index
 ```
-вывод:
+в терминале получим:
 ```shell 
 HELLO !
 ```
